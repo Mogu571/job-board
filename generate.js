@@ -25,7 +25,7 @@ JOBS.forEach((j,idx)=>{
   const websiteLink=j.website?`<a href="${j.website}" target="_blank" style="color:#3185fc;font-size:.85rem">${j.website}</a>`:'';
   const logoFile=LOGOS[j.team];
   const logoHtml=logoFile
-    ?`<img src="../logos/${logoFile}" style="width:36px;height:36px;object-fit:contain;border-radius:8px" onerror="this.outerHTML='${j.ic}'">`
+    ?`<img src="../logos/${logoFile}" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.style.display='none'">`
     :j.ic;
 
   const html=`<!DOCTYPE html>
