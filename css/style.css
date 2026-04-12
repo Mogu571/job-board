@@ -25,6 +25,10 @@ a{color:inherit;text-decoration:none}
 .chip{display:inline-flex;align-items:center;padding:7px 16px;border:1px solid var(--border);border-radius:100px;background:var(--surface);font-family:var(--sans);font-size:.82rem;color:var(--fg2);cursor:pointer;transition:all .2s;white-space:nowrap}
 .chip:hover{border-color:var(--fg3);color:var(--fg)}
 .chip.on{background:var(--fg);color:var(--surface);border-color:var(--fg)}
+.chip-t{display:inline-flex;align-items:center;padding:7px 16px;border:1px solid var(--border);border-radius:100px;background:var(--surface);font-family:var(--sans);font-size:.82rem;color:var(--fg2);cursor:pointer;transition:all .2s;white-space:nowrap}
+.chip-t:hover{border-color:var(--fg3);color:var(--fg)}
+.chip-t.on{background:var(--fg);color:var(--surface);border-color:var(--fg)}
+.filter-div{width:1px;height:20px;background:var(--border);margin:0 4px;flex-shrink:0}
 .s-wrap{flex:1;min-width:180px;max-width:280px;margin-left:auto;position:relative}
 .s-wrap input{width:100%;padding:8px 16px 8px 36px;border:1px solid var(--border);border-radius:100px;background:var(--surface);font-family:var(--sans);font-size:.85rem;color:var(--fg);outline:none;transition:border-color .2s}
 .s-wrap input::placeholder{color:var(--fg3)}
