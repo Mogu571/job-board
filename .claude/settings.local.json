@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(curl -s -L --max-time 10 \"https://floatboat.ai/favicon.ico\" -o /c/Users/mogu/Desktop/job-board/logos/floatboat.png)"
-    ]
-  }
-}
