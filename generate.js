@@ -47,13 +47,6 @@ JOBS.forEach((j,idx)=>{
     </nav>
   </header>
 
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal-box">
-      <button class="modal-close" id="modalClose">&#x2715;</button>
-      <img src="../images/apply-poster.jpg" alt="投递方式">
-    </div>
-  </div>
-
   <div class="detail-wrap">
     <a href="../index.html" class="bk">&larr; 返回职位列表</a>
 
@@ -87,11 +80,7 @@ ${j.website?`      <div class="mr"><div class="ml">Website</div><div class="mv">
     <div style="display:flex;gap:20px"><a href="#">Privacy</a><a href="#">Terms</a></div>
   </footer>
   <script>
-    const overlay=document.getElementById('modalOverlay');
-    document.getElementById('applyBtn').addEventListener('click',()=>overlay.classList.add('open'));
-    document.getElementById('modalClose').addEventListener('click',()=>overlay.classList.remove('open'));
-    overlay.addEventListener('click',e=>{ if(e.target===overlay) overlay.classList.remove('open'); });
-    document.addEventListener('keydown',e=>{ if(e.key==='Escape') overlay.classList.remove('open'); });
+    document.getElementById('applyBtn').addEventListener('click',()=>window.open('https://startlink.feishu.cn/share/base/form/shrcnweRax7h11wM3ceayX19Ev2?from=from_parent_docs','_blank'));
   </script>
 </body>
 </html>`;

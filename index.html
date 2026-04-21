@@ -33,13 +33,6 @@
     </nav>
   </header>
 
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal-box">
-      <button class="modal-close" id="modalClose">&#x2715;</button>
-      <img src="images/apply-poster.jpg" alt="投递方式">
-    </div>
-  </div>
-
   <div class="wrap">
     <div class="stats" id="stats"></div>
     <div class="filters">
@@ -173,12 +166,7 @@
 
   document.getElementById('q').addEventListener('input',e=>renderList(cf,ct,cl,e.target.value.toLowerCase()));
 
-  // Modal
-  const overlay=document.getElementById('modalOverlay');
-  document.getElementById('applyBtn').addEventListener('click',()=>overlay.classList.add('open'));
-  document.getElementById('modalClose').addEventListener('click',()=>overlay.classList.remove('open'));
-  overlay.addEventListener('click',e=>{ if(e.target===overlay) overlay.classList.remove('open'); });
-  document.addEventListener('keydown',e=>{ if(e.key==='Escape') overlay.classList.remove('open'); });
+  document.getElementById('applyBtn').addEventListener('click',()=>window.open('https://startlink.feishu.cn/share/base/form/shrcnweRax7h11wM3ceayX19Ev2?from=from_parent_docs','_blank'));
   </script>
 </body>
 </html>
