@@ -8,6 +8,22 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <div class="splash" id="splash">
+    <button class="splash-skip" id="splashSkip">跳过</button>
+    <div class="splash-inner">
+      <p class="splash-line" style="animation-delay:.4s">工作竟然占据了人类一生中的</p>
+      <p class="splash-line splash-big" style="animation-delay:.95s"><span class="splash-hl">1/3</span> 时间！</p>
+      <p class="splash-line" style="animation-delay:1.9s">如果要一直待在痛苦的流水线工厂里...</p>
+      <p class="splash-line splash-em" style="animation-delay:2.55s">该有多难受！</p>
+      <p class="splash-line splash-sm" style="animation-delay:3.5s">不过我们为你搜罗了很多年轻的 <em>AI Startup</em></p>
+      <p class="splash-line splash-sm" style="animation-delay:4.1s">他们都是怀揣梦想、期待改变世界的团队</p>
+      <p class="splash-line splash-sm" style="animation-delay:4.65s">如果你也想加入这样的公司，点击右上角填写表单</p>
+      <p class="splash-line splash-sm" style="animation-delay:5.15s">我们会帮助你匹配快速成长中的 <em>Startup</em>！</p>
+      <button class="splash-enter" id="splashEnter" style="animation-delay:6s">开始探索 →</button>
+    </div>
+  </div>
+
   <header class="nav">
     <nav class="nav-in">
       <ul class="nav-links">
@@ -33,9 +49,17 @@
       <button class="chip" data-f="product">产品</button>
       <button class="chip" data-f="operations">运营</button>
       <div class="filter-div"></div>
-      <button class="chip-t on" data-t="all">全部类型</button>
+      <span class="filter-label">类型</span>
+      <button class="chip-t on" data-t="all">全部</button>
       <button class="chip-t" data-t="全职">全职</button>
       <button class="chip-t" data-t="实习">实习</button>
+      <div class="filter-div"></div>
+      <span class="filter-label">地点</span>
+      <button class="chip-l on" data-l="all">全部</button>
+      <button class="chip-l" data-l="上海">上海</button>
+      <button class="chip-l" data-l="北京">北京</button>
+      <button class="chip-l" data-l="深圳">深圳</button>
+      <button class="chip-l" data-l="杭州">杭州</button>
       <div class="s-wrap">
         <svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         <input type="text" placeholder="搜索职位、公司、城市..." id="q">
@@ -53,6 +77,25 @@
   </footer>
 
   <script src="js/data.js"></script>
+  <script>
+  (function(){
+    if(sessionStorage.getItem('splashDone')){
+      document.getElementById('splash').remove();
+      return;
+    }
+    document.body.style.overflow='hidden';
+    function dismiss(){
+      var s=document.getElementById('splash');
+      s.classList.add('out');
+      document.body.style.overflow='';
+      sessionStorage.setItem('splashDone','1');
+      setTimeout(function(){s.remove();},800);
+    }
+    document.getElementById('splashSkip').addEventListener('click',dismiss);
+    document.getElementById('splashEnter').addEventListener('click',dismiss);
+    setTimeout(dismiss,9000);
+  })();
+  </script>
   <script>
   const LOGOS={
     'Chatcut':'logos/chatcut.png',
@@ -77,13 +120,14 @@
     return j.ic;
   }
 
-  function renderList(f,t,q){
+  function renderList(f,t,l,q){
     const $=document.getElementById('rows');
     const list=JOBS.filter(j=>{
       const fd=f==='all'||j.dept===f;
       const ft=t==='all'||j.type===t;
+      const fl=l==='all'||j.loc.includes(l);
       const fq=!q||j.pos.toLowerCase().includes(q)||j.team.toLowerCase().includes(q)||j.loc.toLowerCase().includes(q);
-      return fd&&ft&&fq;
+      return fd&&ft&&fl&&fq;
     });
     $.innerHTML=list.map((j,i)=>{
       const hasLogo=!!LOGOS[j.team];
@@ -97,15 +141,15 @@
     }).join('');
   }
 
-  let cf='all', ct='all';
-  renderList(cf,ct,'');
+  let cf='all', ct='all', cl='all';
+  renderList(cf,ct,cl,'');
 
   document.querySelectorAll('.chip').forEach(b=>{
     b.addEventListener('click',()=>{
       document.querySelectorAll('.chip').forEach(c=>c.classList.remove('on'));
       b.classList.add('on');
       cf=b.dataset.f;
-      renderList(cf,ct,document.getElementById('q').value.toLowerCase());
+      renderList(cf,ct,cl,document.getElementById('q').value.toLowerCase());
     });
   });
 
@@ -114,11 +158,20 @@
       document.querySelectorAll('.chip-t').forEach(c=>c.classList.remove('on'));
       b.classList.add('on');
       ct=b.dataset.t;
-      renderList(cf,ct,document.getElementById('q').value.toLowerCase());
+      renderList(cf,ct,cl,document.getElementById('q').value.toLowerCase());
     });
   });
 
-  document.getElementById('q').addEventListener('input',e=>renderList(cf,ct,e.target.value.toLowerCase()));
+  document.querySelectorAll('.chip-l').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('.chip-l').forEach(c=>c.classList.remove('on'));
+      b.classList.add('on');
+      cl=b.dataset.l;
+      renderList(cf,ct,cl,document.getElementById('q').value.toLowerCase());
+    });
+  });
+
+  document.getElementById('q').addEventListener('input',e=>renderList(cf,ct,cl,e.target.value.toLowerCase()));
 
   // Modal
   const overlay=document.getElementById('modalOverlay');
