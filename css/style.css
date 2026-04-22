@@ -19,7 +19,7 @@ a{color:inherit;text-decoration:none}
 .btn-p{padding:8px 20px;background:var(--fg);color:var(--surface);border:none;border-radius:100px;font-family:var(--sans);font-size:.84rem;font-weight:500;cursor:pointer;transition:opacity .2s;display:inline-flex;align-items:center;justify-self:end}
 .btn-p:hover{opacity:.8}
 
-.wrap{max-width:var(--max-w);margin:0 auto;padding:0 32px}
+.wrap{max-width:var(--max-w);margin:0 auto;padding:40px 32px 0}
 
 .filters{display:flex;align-items:center;gap:10px;padding:24px 0 20px;flex-wrap:wrap}
 .chip{display:inline-flex;align-items:center;padding:7px 16px;border:1px solid var(--border);border-radius:100px;background:var(--surface);font-family:var(--sans);font-size:.82rem;color:var(--fg2);cursor:pointer;transition:all .2s;white-space:nowrap}
@@ -119,7 +119,7 @@ a{color:inherit;text-decoration:none}
 }
 
 /* Nav logo */
-.nav-brand{display:flex;align-items:center;flex-shrink:0;height:58px;overflow:hidden}
+.nav-brand{display:flex;align-items:center;flex-shrink:0;height:58px;overflow:hidden;justify-self:start}
 .nav-logo{height:160px;width:auto;display:block}
 
 /* Splash */
