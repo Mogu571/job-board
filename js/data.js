@@ -93,6 +93,16 @@ const JOBS=[
 <h3>任职要求</h3><ul><li>精通Go/Python/Java任一语言，精通分布式、微服务、向量数据库等</li><li>具备高并发系统实战经验，熟练使用K8s、Docker、云服务平台</li></ul>`},
 {id:'a607551c',team:'Tripo',pos:'HRBP（偏招聘）',loc:'杭州',locD:'杭州',dept:'operations',c:'#d35400',ic:'T',tags:['全职','杭州'],website:'https://www.tripo3d.ai/zh',type:'全职',desc:`<h3>工作职责</h3><ul><li>根据公司年度业务规划制定并执行招聘计划，持续优化招聘渠道与策略</li><li>负责端到端招聘流程管理（职位发布、简历筛选、面试协调、背调、录用沟通）</li><li>作为HRBP深入理解业务战略，在组织发展、团队建设、绩效管理等方面提供解决方案</li><li>利用数据分析驱动招聘与人才决策</li></ul>
 <h3>任职要求</h3><ul><li>本科及以上，人力资源管理/心理学/工商管理等相关专业优先</li><li>3年以上招聘相关工作经验，互联网/科技/金融行业或HRBP经验优先</li><li>具备较强的数据分析能力和业务洞察力</li><li>英语可作为工作语言，能流畅进行书面与口语沟通</li></ul>`},
+{id:'a1b2c3d4',team:'Chatcut',pos:'Web 全栈工程师',loc:'上海',locD:'上海',dept:'engineering',c:'#1a1a1a',ic:'C',tags:['全职','上海'],website:'https://chatcut.io',type:'全职',desc:`<h3>工作职责</h3><p>负责 ChatCut Web 端剪辑应用——让浏览器里的剪辑比 Premiere 还顺。从前端编辑器、播放器、AI 链路，到后端 API、任务、数据库、日志，端到端拥有。</p>
+<h3>任职要求</h3><ul><li>React / TypeScript 熟手，状态管理和性能优化有自己一套</li><li>Node.js 后端能独立 ship，能从前端追到 SQL 和 Lambda 日志</li><li>做过编辑器 / 播放器 / Canvas / WebGL / 音视频应用更好</li><li>重视 UI/UX，能把复杂交互做得顺手、可靠</li><li>把 Claude Code、Cursor 当左右手</li><li>英文读写 OK，能阅读源码、文档、英文 issue</li></ul>
+<h3>加分项</h3><p>WebCodecs · FFmpeg · Web Workers · 创业经验 · 开源项目 · 视频内容理解（镜头切分 / 关键帧 / 字幕）</p>
+<p><strong>申请前请去用一下 chatcut.io——告诉我们你看到了什么、想改什么。</strong></p>`},
+{id:'e5f6a7b8',team:'Chatcut',pos:'AI Agent 工程师',loc:'上海',locD:'上海',dept:'engineering',c:'#1a1a1a',ic:'C',tags:['全职','上海'],website:'https://chatcut.io',type:'全职',desc:`<h3>工作职责</h3><p>构建支撑 Web 端视频剪辑应用的后端服务，包括视频处理管线、AI 模型服务、存储方案和 API 设计。直接与创始人协作，为 AI 剪辑功能提供强大的技术支撑。</p>
+<h3>任职要求</h3><ul><li>Node.js / Python 后端基本功扎实，会数据库、缓存、队列、对象存储</li><li>真做过 Agent：tool calling / memory / MCP / 多 agent / 上下文工程</li><li>有 LLM 应用上过线、被用户用过、做过 eval</li><li>能搭 AI 工作流：拆解、调用、失败恢复、日志、监控</li><li>熟悉 AWS / Docker，扛得住复杂异步任务</li><li>把 Claude Code、Cursor 当左右手</li></ul>
+<h3>加分项</h3><p>视频理解 · RAG · Workflow Engine · 真用户用过的 AI 应用 · 高并发任务调度 · 开源项目</p>
+<p><strong>体验过 ChatCut 后，能给出尖锐、有产品感的改进建议——这是最强的简历。</strong></p>`},
+{id:'c9d0e1f2',team:'Skyris',pos:'HR 实习生',loc:'上海',locD:'上海',dept:'operations',c:'#2980b9',ic:'S',tags:['实习','上海'],website:null,type:'实习',desc:`<h3>工作职责</h3><ul><li>协助开展各类人才招聘工作，包括简历筛选、候选人寻访、面试安排与跟进等</li><li>参与目标企业人才 Mapping 项目，梳理具身智能行业人才分布与流动情况</li><li>协助维护人才库，对候选人信息进行系统化录入与更新，保障招聘数据精准性</li><li>支持团队开展的社招/校招/人力相关工作，如招聘信息发布、简历初筛、面试邀约安排、各类人力活动策划运营等</li><li>协助完成招聘数据分析报告，优化招聘渠道与策略，提升招聘效率</li></ul>
+<h3>任职要求</h3><ul><li>本科及以上学历，人力资源管理、工商管理、计算机等相关专业优先，2026届及以后毕业</li><li>对机器人领域有浓厚兴趣，有招聘实习经验者优先</li><li>具备良好的沟通协调能力与团队协作精神，积极主动，执行能力强，能适应快节奏工作环境</li><li>熟练使用 Office 办公软件，具备基础数据分析与图表制作能力</li><li>能保证 3 个月以上全职实习（每周出勤不少于 4 天），实习周期稳定者优先</li></ul>`},
 {id:'99998a30',team:'万物时',pos:'AI Agent算法实习生（软硬协同方向）',loc:'杭州',locD:'杭州',dept:'engineering',c:'#5b2c6f',ic:'万',tags:['实习','杭州'],website:null,type:'实习',desc:`<h3>工作职责</h3><ul><li>为核心IP构建具备记忆、性格与感知能力的AI Agent架构</li><li>将Agent的决策与情绪精准映射并触发硬件端的3D角色动作与日常动画表现</li><li>配合团队打通「云端大模型-本地Linux硬件-动画渲染」的完整交互链路</li></ul>
 <h3>任职要求</h3><ul><li>玩过且熟悉OpenClaw、OpenInterpreter等开源Agent框架，有实际搭过智能体的经历</li><li>Python扎实，能快速看懂、跑通并魔改GitHub上的前沿AI开源项目</li><li>具备超强的学习力与成长性，喜欢硬核折腾</li></ul>
 <h3>加分项</h3><ul><li>玩过树莓派/开发板/Linux</li><li>了解游戏/动画的状态机（State Machine）逻辑</li></ul>`},
