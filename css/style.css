@@ -118,6 +118,7 @@ a{color:inherit;text-decoration:none}
   .nav-brand{justify-self:stretch}
   .ft{flex-direction:column;gap:8px}
   .filters > div:nth-of-type(2){flex-basis:100%;height:0;border:none;margin:0}
+  .filters > span.filter-label:last-of-type::before{content:'';display:inline-block;width:1px;height:20px;background:var(--border);margin:0 6px 0 0;vertical-align:middle}
 }
 
 /* Nav logo */
