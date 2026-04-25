@@ -113,8 +113,9 @@ a{color:inherit;text-decoration:none}
   .ml{width:auto}
 }
 @media(max-width:600px){
-  .nav-links{gap:16px}
-  .nav-links a:not(.active){display:none}
+  .nav-in{grid-template-columns:auto auto;justify-content:space-between}
+  .nav-links{display:none}
+  .nav-brand{max-width:180px}
   .ft{flex-direction:column;gap:8px}
 }
 
