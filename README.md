@@ -1,5 +1,5 @@
 # Open Roles — AI Startup Job Board
 
-47 个职位，11 家 AI 创业公司。
+52 个职位，11 家 AI 创业公司。
 
 
