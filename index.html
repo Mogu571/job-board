@@ -123,7 +123,7 @@
     const $=document.getElementById('rows');
     const list=JOBS.filter(j=>{
       const fd=f==='all'||j.dept===f;
-      const ft=t==='all'||j.type===t;
+      const ft=t==='all'||[].concat(j.type).includes(t);
       const fl=l==='all'||j.loc.includes(l);
       const fq=!q||j.pos.toLowerCase().includes(q)||j.team.toLowerCase().includes(q)||j.loc.toLowerCase().includes(q);
       return fd&&ft&&fl&&fq;
@@ -134,7 +134,7 @@
       return `<a class="jr" href="jobs/${j.id}.html" style="animation-delay:${i*.02}s">
         <div class="ct"><div class="ti" style="${bgStyle}">${logoHtml(j)}</div><span class="tl">${j.team}${j.website?extSvg:''}</span></div>
         <div><div class="pt">${j.pos}</div></div>
-        <div><span class="type-tag ${j.type}">${j.type}</span></div>
+        <div>${[].concat(j.type).map(t=>`<span class="type-tag ${t}">${t}</span>`).join(' ')}</div>
         <div class="cp">${j.loc}</div>
       </a>`;
     }).join('');
